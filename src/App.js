@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./bootstrap.min.css";
 import Header from "./components/Header";
 import Nuevacita from "./components/Nuevacita";
+import ListaCitas from "./components/ListaCitas";
 
 class App extends Component {
   state = {
@@ -14,16 +15,19 @@ class App extends Component {
 
     // agregar el nuevo state
     this.setState({
-      citas: citas
+      citas
     });
   };
   render() {
     return (
-      <div class="container-fluid">
+      <div className="container">
         <Header titulo="Administrador pacientes veterinaria" />
         <div className="row">
           <div className="col-md-10 mx-auto">
             <Nuevacita crearNuevacita={this.crearNuevacita} />
+          </div>
+          <div className="mt-5 col-md-10 mx-auto">
+            <ListaCitas citas={this.state.citas} />
           </div>
         </div>
       </div>

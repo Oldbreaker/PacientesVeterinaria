@@ -30,11 +30,11 @@ class Nuevacita extends Component {
 
     //validar que todos los campos esten llenos
     if (
-      mascota == "" ||
-      propietario == "" ||
-      fecha == "" ||
-      hora == "" ||
-      sintomas == ""
+      mascota === "" ||
+      propietario === "" ||
+      fecha === "" ||
+      hora === "" ||
+      sintomas === ""
     ) {
       this.setState({
         error: true
@@ -56,7 +56,7 @@ class Nuevacita extends Component {
     });
   };
   render() {
-    // estraer valor del state
+    // extraer valor del state
     const { error } = this.state;
     return (
       <div className="card mt-5 py 5">
@@ -109,7 +109,7 @@ class Nuevacita extends Component {
             {/*form-group */}
             <div className="form-group row">
               <label className="col-sm-4 col-lg-2 col-form-label">Fecha</label>
-              <div className="col-sm-2 col lg-4">
+              <div className="col-sm-3 col lg-4">
                 <input
                   type="date"
                   className="form-control"
